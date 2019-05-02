@@ -9,8 +9,15 @@
 <body>
     
 
+    <?php
+    
+    $numberlist = array(
 
-
-
+        23,24,25,26,27, 'white', 'black', '<h1>Hello</h1>'
+    );
+    
+    print_r($numberlist[1]);
+    
+    ?>
 </body>
 </html>

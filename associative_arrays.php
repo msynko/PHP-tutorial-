@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    div,
+    <?php
+        $number = array( 1,2,3);
+    
+    echo $number[2] . "<br>";
+
+    $names = array("first_name" => 'Marina', "last_name" => 'Synko');
+    
+    echo $names['first_name'] . " " . $names['last_name'];
+    ?>
 </body>
 </html>
