@@ -11,20 +11,14 @@
 
 
 
-<?php
+<?php include "db.php";
 
 if(isset($_POST['submit'])){
 
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
-
-    if($connection){
-        echo "we are connected";
-    }else {
-        die("Database connection failed");
-    }
+  
 
 
 

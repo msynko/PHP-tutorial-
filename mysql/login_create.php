@@ -1,36 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
 
+<!-- CREATE -->
 
+<?php include "db.php"; ?>
+<?php include "functions.php";?>
 
-<?php
+<?php createRows(); ?>
 
-if(isset($_POST['submit'])){
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
-
-    if($connection){
-        echo "we are connected";
-    }else {
-        die("Database connection failed");
-    }
-
- } ?>
+<?php include "includes/header.php" ?>
 
 <div class="container">
 
 <div class="col-m-6">
+    <h1 class="text-center">Create users</h1>
     <form action="login_create.php" method="post">
         <div class="form-group">
         <label for="username"> Username</label>
@@ -42,10 +23,9 @@ if(isset($_POST['submit'])){
                     <input type="password" name="password" class="form-control">
             </div>
 
-                <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                <input class="btn btn-primary" type="submit" name="submit" value="Create">
         </form>
 </div>
 </div>
 
-</body>
-</html>
+<?php include "includes/footer.php" ?>
