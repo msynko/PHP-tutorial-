@@ -1,8 +1,6 @@
-
 <?php
-    $connection = mysqli_connect('localhost', 'root', 'root', 'login_app');
 
-        if(!$connection){
-            die("Database connection failed");
-        } 
-?>
+   $connection = mysqli_connect('localhost', 'root', 'root', 'loginapp');  
+    if(!$connection) {
+        die("Database connection failed");
+    }

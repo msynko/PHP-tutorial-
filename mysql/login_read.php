@@ -1,29 +1,16 @@
-<!-- READ -->
-
-<?php include "db.php"; 
- include "function.php"; ?>
+<?php include "db.php";?>
+<?php include "functions.php";?>
 
 <?php include "includes/header.php" ?>
- 
-            <div class="container">
 
-                <div class="col-m-6">
-
-                    <?php 
+<div class="container">
     
-                         while($row = mysqli_fetch_assoc($result)){
+    <div class="col-sm-6">
 
-                    ?>
-                <pre>
+    <pre>
+  <?php readRows(); ?>
+     </pre>
+    </div>
 
-                    <?php
-                        print_r($row);
-                        ?>
 
-                </pre>
-                     <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-<?php include "includes/footer.php" ?>
+<?php include "includes/footer.php"?>
